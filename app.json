@@ -1,0 +1,56 @@
+{
+  "name": "teesoadv",
+  "description": "",
+  "scripts": {
+  },
+  "env": {
+    "COUPON_URL": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
+    "MAILER_HOST": {
+      "required": true
+    },
+    "MAILER_SENDER": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "REGISTRATION_MAILER_SENDER": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    },
+    "SYSTEM_MAILER_RECEIVER": {
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+    },
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql",
+    "redistogo",
+    "sendgrid"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
